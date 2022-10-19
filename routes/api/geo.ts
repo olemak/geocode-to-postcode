@@ -8,7 +8,7 @@ const postalcode = (addressComponents: any) => {
             // @ts-expect-error-next-line
             .find(component => component.types.includes("postal_code"))
         );
-    console.log(postal_code);           // TODO: Remove this line!
+    console.log({postal_code});           // TODO: Remove this line!
     return postal_code;
 }
 
