@@ -18,7 +18,7 @@ export const handler = async (req: Request, _ctx: HandlerContext): Promise<Respo
     const lat = req.url.match(/lat=([^&]*)/)[1];
     // @ts-expect-error-next-line
     const lng = req.url.match(/lng=([^&]*)/)[1];
-    const geoDataUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${googleAPIkey}&result_type=street_address&language=no`;
+    const geoDataUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${googleAPIkey}&result_type=street_address`;
     const geoData = await fetch(geoDataUrl).then(r => r.json()).then(res => {
         const [pocode_object] = postalcode(res);
         return pocode_object.long_name;
