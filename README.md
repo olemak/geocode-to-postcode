@@ -1,12 +1,12 @@
 # Find my post number
-
 Ever wonder what the post number is where you're at?  
 Use this simple service to discover what it is!
 
-### Usage
+### Setup
+Clone the repo locally, then do what this file says:  
+[.dev-setup](./.dev-setup.ts)
 
-Start the project:
-
+### Start
 ```
 deno task start
 ```

@@ -1,5 +1,4 @@
 import { HandlerContext } from "$fresh/server.ts";
-import { config } from "https://deno.land/x/dotenv/mod.ts";
 
 const postalcode = (addressComponents: any) => {
     const postal_code = addressComponents.results
@@ -13,7 +12,7 @@ const postalcode = (addressComponents: any) => {
 }
 
 export const handler = async (req: Request, _ctx: HandlerContext): Promise<Response> => {
-    const googleAPIkey = config().GMAPS_KEY;
+    const googleAPIkey = Deno.env.get('GMAPS_KEY');
     // @ts-expect-error-next-line
     const lat = req.url.match(/lat=([^&]*)/)[1];
     // @ts-expect-error-next-line
