@@ -1,14 +1,14 @@
 import { HandlerContext } from "$fresh/server.ts";
 
 const postalcode = (addressComponents: any) => {
-    console.log({addressComponents});   // TODO: Remove this line!
+
     const postal_code = addressComponents.results
         // @ts-expect-error-next-line 
         .map(result => result.address_components
             // @ts-expect-error-next-line
             .find(component => component.types.includes("postal_code"))
         );
-    console.log({postal_code});           // TODO: Remove this line!
+
     return postal_code;
 }
 
