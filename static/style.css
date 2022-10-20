@@ -11,6 +11,8 @@ main {
     background-color: blueviolet;
     color: white;
     font-family: sans-serif;
+    text-align: center;
+    padding: 25px;
 }
 
 button {
